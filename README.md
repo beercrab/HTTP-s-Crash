@@ -23,6 +23,20 @@
 - **快速操作**：一键刷新页面、清除浏览器缓存、打开上网审计页面。
 - **复制诊断结果**：一键复制当前诊断报告，便于反馈给技术支持。
 
+## 界面预览🔍
+
+<div align="center">
+
+| 主界面 |手动检测 |
+|:------:|:--------:|
+| <img src="./screenshot-popup.png" alt="主界面" width="300"> | <img src="images/screenshot-audit.png" alt="手动检测" width="300"> |
+
+| 快速操作 | 上网审计 |
+|:------:|:--------:|
+| <img src="images/screenshot-manual.png" alt="快速操作" width="300"> | <img src="images/screenshot-local.png" alt="上网审计" width="300"> |
+
+</div>
+
 ## 安装方法📲
 
 1. 下载本仓库源码并解压。
