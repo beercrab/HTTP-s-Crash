@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./favicon.png" alt="网络诊断小助手 Logo" width="150">
+  <img src="./favicon.png" alt="网络诊断小助手 Logo" width="100">
 </div>
 
 # 网络诊断助手 （HTTP's Crash）
