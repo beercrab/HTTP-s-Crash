@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="./favicon.png" alt="网络诊断小助手 Logo" width="100">
+  <img src="./favicon.png" alt="网络诊断小助手 Logo" width="120">
 </div>
 
-# 网络诊断助手 （HTTP's Crash）
+## 网络诊断助手 （HTTP's Crash）
 
 
 一个功能强大的 Chrome 扩展，用于快速诊断网络连接问题、查看网站详细信息、记录网络请求日志，并提供用户自查建议。与传统的 OSI/TCP/IP 模型自底向上分析不同，本工具采用自上而下的 HTTP 应用层诊断方法，直接聚焦于用户最关心的网站访问问题，屏蔽底层复杂网络细节，让故障排查更简单、更快速。
