@@ -5,7 +5,7 @@
 ## 网络诊断助手 （HTTP's Crash）
 
 
-一个功能强大的 Chrome 扩展，用于快速诊断网络连接问题、查看网站详细信息、记录网络请求日志，并提供用户自查建议。与传统的 OSI/TCP/IP 模型自底向上分析不同，本工具采用自上而下的 HTTP 应用层诊断方法，直接聚焦于用户最关心的网站访问问题，屏蔽底层复杂网络细节，让故障排查更简单、更快速。
+一个功能强大的 Chrome 扩展，用于快速诊断网络连接问题、查看网站详细信息、记录网络请求日志，并提供用户自查建议。与传统的 `OSI` `TCP/IP` 模型自底向上分析不同，本工具采用自上而下的 HTTP 应用层诊断方法，直接聚焦于用户最关心的网站访问问题，屏蔽底层复杂网络细节，让故障排查更简单、更快速。
 
 ## 功能特性✨
 
@@ -29,11 +29,11 @@
 
 | 主界面 |手动检测 |
 |:------:|:--------:|
-| <img src="./screenshot-popup.png" alt="主界面" width="300"> | <img src="images/screenshot-audit.png" alt="手动检测" width="300"> |
+| <img src="./screenshot-popup.png" alt="主界面" width="300"> | <img src="./screenshot-manual.png" alt="手动检测" width="300"> |
 
 | 快速操作 | 上网审计 |
 |:------:|:--------:|
-| <img src="images/screenshot-manual.png" alt="快速操作" width="300"> | <img src="images/screenshot-local.png" alt="上网审计" width="300"> |
+| <img src="./screenshot-local.png" alt="快速操作" width="300"> | <img src="./screenshot-audit.png" alt="上网审计" width="300"> |
 
 </div>
 
