@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "HTTP's Crash",
+  "version": "2.4.0",
+  "description": "网络连接诊断 + 安全审计",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "notifications",
+    "tabs",
+    "dns",
+    "alarms",
+    "windows"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "HTTP's Crash",
+    "default_icon": {
+      "16": "icons/favicon.png",
+      "48": "icons/favicon.png",
+      "128": "icons/favicon.png"
+    }
+  },
+  "icons": {
+    "16": "icons/favicon.png",
+    "48": "icons/favicon.png",
+    "128": "icons/favicon.png"
+  }
+}

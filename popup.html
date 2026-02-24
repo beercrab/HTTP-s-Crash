@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP's Crash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 头部 -->
+        <header>
+            <h1><i class="fas fa-network-wired"></i> HTTP's Crash </h1>
+        </header>
+
+        <!-- 当前网站卡片 -->
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fas fa-globe"></i> 当前访问网站</h2>
+                <span class="badge" id="lastCheckTime">未检测</span>
+            </div>
+            <div class="status-row">
+                <span class="status-dot" id="statusDot"></span>
+                <span class="status-text" id="statusText">等待检测</span>
+            </div>
+            <div class="details-grid" id="detailsGrid">
+                <div class="detail-item">
+                    <span class="detail-label">URL：</span>
+                    <span class="detail-value url" id="currentUrl" title="点击复制">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">网站IP：</span>
+                    <span class="detail-value" id="siteIp">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">网站归属地：</span>
+                    <span class="detail-value" id="siteLocation">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">网站类型：</span>
+                    <span class="detail-value" id="siteType">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">HTTP状态码：</span>
+                    <span class="detail-value" id="statusCode">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">错误类型：</span>
+                    <span class="detail-value" id="errorType">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 本地互联网信息卡片（含状态灯） -->
+        <div class="card" id="localInternetCard">
+            <div class="card-header">
+                <h2><i class="fas fa-wifi"></i> 本地互联网信息</h2>
+                <span class="badge" id="localInfoTime">获取中...</span>
+            </div>
+            <div class="status-row">
+                <span class="status-dot" id="localStatusDot"></span>
+                <span class="status-text" id="localStatusText">检测中</span>
+            </div>
+            <div class="details-grid" id="localInfoGrid">
+                <div class="detail-item">
+                    <span class="detail-label">公网IP：</span>
+                    <span class="detail-value" id="publicIp">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">归属地：</span>
+                    <span class="detail-value" id="publicLocation">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">运营商：</span>
+                    <span class="detail-value" id="publicIsp">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 自查建议卡片 -->
+        <div class="card">
+            <h2><i class="fas fa-user-check"></i> 用户自查建议</h2>
+            <div class="suggestions-list" id="suggestionsList"></div>
+        </div>
+
+        <!-- 手动检测卡片 -->
+        <div class="card">
+            <h2><i class="fas fa-wrench"></i> 手动检测</h2>
+            <div class="hint"><i class="fas fa-info-circle"></i> 测试其他网站，判断是否为单一问题。</div>
+            <div class="input-group">
+                <input type="text" id="manualUrl" placeholder="https://example.com" value="https://www.tfme.com">
+                <div class="quick-buttons">
+                    <button class="quick-btn" data-url="https://example.com">官网</button>
+                    <button class="quick-btn" data-url="https://www.baidu.com">百度</button>
+                    <button class="quick-btn" data-url="https://bing.com">必应</button>
+                    <button class="quick-btn" data-url="https://www.douyin.com/">抖音</button>
+                </div>
+            </div>
+            <div class="action-row">
+                <button id="testBtn" class="btn primary"><i class="fas fa-play"></i> 检测</button>
+                <button id="clearUrlBtn" class="btn secondary"><i class="fas fa-eraser"></i> 清空</button>
+            </div>
+            <div id="manualResult" class="manual-result" style="display: none;"></div>
+        </div>
+
+        <!-- 底部操作栏 -->
+        <div class="action-bar">
+            <button id="clearHistoryBtn" class="btn secondary"><i class="fas fa-trash"></i> 清除记录</button>
+            <button id="copyResultBtn" class="btn secondary"><i class="fas fa-copy"></i> 复制结果</button>
+        </div>
+
+        <!-- 快速操作 -->
+        <div class="quick-actions">
+            <h3><i class="fas fa-tools"></i> 快速操作</h3>
+            <div class="grid-4">
+                <div class="action-item" data-action="refresh">
+                    <i class="fas fa-redo"></i><span>刷新页面</span>
+                </div>
+                <div class="action-item" data-action="clearCache">
+                    <i class="fas fa-broom"></i><span>清除缓存</span>
+                </div>
+                <!-- 自动显示开关，点击切换状态 -->
+                <div class="action-item" id="autoShowContainer">
+                    <i class="fas fa-bell"></i>
+                    <span>自动显示</span>
+                </div>
+                <div class="action-item" data-action="audit">
+                    <i class="fas fa-chart-bar"></i><span>上网审计</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>© 2026 HTTP's Crash </p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
